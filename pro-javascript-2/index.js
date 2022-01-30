@@ -26,6 +26,13 @@ function promiseReduce(asyncFunctions, reduce, initialValue) {
   });
 }
 
+// Решение от наставника 
+// function promiseReduce(asyncFns, reducerFn, initialValue) {
+//   return asyncFns.reduce(
+//     (acc, curFn) => 
+//       acc.then((acc) => curFn().then((res) => reducerFn(acc, res))), Promise.resolve(initialValue));
+// }
+
 promiseReduce(
   [fn1, fn2, fn3], 
   function (memo, value) {
