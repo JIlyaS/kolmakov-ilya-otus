@@ -1,0 +1,16 @@
+{
+  "name": "pro-javascript-3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest --env=jsdom"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.2"
+  }
+}
