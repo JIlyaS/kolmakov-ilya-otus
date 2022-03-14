@@ -10,7 +10,7 @@ document.body.innerHTML =
 describe('getPath', () => {
   it('Should correсt return getPath unique identificator', () => {
     const el = document.querySelector('li');
-    expect(getPath(el)).toBe('body ul.list#list li:first-child');
+    expect(getPath(el)).toBe('body #list li:first-child');
   });
 
   it('Should getPath not found element', () => {

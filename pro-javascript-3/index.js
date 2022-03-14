@@ -8,13 +8,20 @@ const getPath = (element) => {
     return;
   }
 
-  const parent = element.parentElement;
-  const tag = element.tagName.toLowerCase();
-  const classname = element.className ? `.${element.className}` : '';
-  const id = element.id ? `#${element.id}` : '';
-  const noBody = element.tagName.toLowerCase() !== 'body';
   let part = '';
   let resultStr = '';
+  let tag = '';
+  let classname = '';
+
+  const id = element.id ? `#${element.id}` : '';
+  
+  if (!id) {
+    tag = element.tagName.toLowerCase();
+    classname = element.className ? `.${element.className}` : '';
+  }
+
+  const parent = element.parentElement;
+  const noBody = element.tagName !== 'BODY';
 
   // Если у элементов списка нет ни классов, ни id - проверяем индекс элемента списка и выводим дополнительный псевдокласс
   if (!classname && !id && noBody) {
